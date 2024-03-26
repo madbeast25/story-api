@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  
+}
+
+body{
+    background:url("/pattern.png");
+    background-size: cover;
+}
+
+.logo{
+        font-family: "Pacifico", cursive;
+        font-weight: 500;
+        font-style: normal;
+        color: #5755FE;
+        margin-left: 15px;
+        cursor: pointer; 
+        animation: animate 5s ease-in-out infinite;
+        transition: 0.5s;
+}
+
+@keyframes animate{
+    0%{
+        scale: 0;
+    }
+   
+    50%{
+        scale: 0.5;
+    }
+
+    100%{
+        scale: 1;
+    }
+}
+
+.logo:hover{
+    color: #FF71CD;
+    transition: 0.5s;
+}
+
+.logo:hover:after{
+    color: #FF71CD;
+    transition: 0.5s;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 95%;
+    margin: 10px 25px;
+    background: whitesmoke;
+   
+
+}
+
+ul li{
+    display: inline-block;
+    margin: 10px;
+}
+
+button{
+    text-transform: uppercase;
+    border-radius: 25px;
+    border: 2px solid #FF71CD;
+    padding: 5px;
+    background: whitesmoke;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+button:hover{
+    background-color: #FF71CD;
+    color: aliceblue;
+    scale: 0.8;
+    transition: all 0.5s;
+    cursor: pointer;	
+}
+
+.mid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+input{
+    padding: 5px;
+    padding-left: 50px;
+    border-radius: 20px;
+    border: 2px solid #FF71CD;
+    background: whitesmoke;
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+textarea{
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+    border: 2px solid #FF71CD;
+    background: whitesmoke;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+::placeholder{
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.btns{
+    height: 250px;
+    width: 100px;
+    position: absolute;
+    right: 400px;
+    top:170px;
+    padding: 10px;
+    
+}
+
+.btns button{
+    margin: 5px 0;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+    margin: 15px;
+    margin-left: 25px;
+    bottom: 0;
+    position: fixed;
+    width: 95%;
+    background: whitesmoke;
+}
+
+.footer ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+
+section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container{
+    background: hsl(0, 0%, 0%,0.1);
+    margin: 25px;
+    box-shadow: 4px 4px 4px 3px hsl(0, 0%, 0%,0.1);
+}
+
+
+
+.board p{
+   font-size: 1rem;
+   font-weight: 400;
+   color: aliceblue;
+   display: inline-block;
+   margin-left: 25px;
+   
+}
+
+.board h3{
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: black;
+    margin-left: 25px;
+}
+
+.board h1{
+    color: aliceblue;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.copy{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.edit{
+    margin-left: 10px;
+}
+
+.graph{
+    position: absolute;
+    background-color: hsl(0, 0%, 0%,0.1);
+    border: 2px solid hsl(0, 0%, 0%,0.2);
+    border-bottom: 2px solid hsl(0, 0%, 0%,0.1);
+    border-right: 2px solid hsl(0, 0%, 0%,0.1);
+    box-shadow: 2px 2px 2px 1px hsl(0, 0%, 0%,0.1);
+    border-radius: 10px;
+    transition: 0.5s;
+    animation: animate2 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+.graph:nth-child(1){
+    top:300px;
+    left: 350px;
+    height: 50px;
+    width: 50px;
+}
+.graph:nth-child(2){
+    top:120px;
+    left: 100px;
+    height: 150px;
+    width: 150px;
+}
+.graph:nth-child(3){
+    bottom:100px;
+    right:75px;
+    height: 100px;
+    width: 100px;
+}
+.graph:nth-child(4){
+    top:130px;
+    right: 100px;
+    height: 75px;
+    width: 75px;
+}
+.graph:nth-child(5){
+    top:175px;
+    right: 250px;
+    height: 150px;
+    width: 150px;
+}
+.graph:nth-child(6){
+    top:250px;
+    left: 300px;
+    height: 100px;
+    width: 100px;
+}
+.graph:nth-child(7){
+    top:350px;
+    left: 125px;
+    height: 50px;
+    width: 50px;
+}
+
+
+@keyframes animate2{
+    0%,100%{
+        transform: translateY(40px);
+    }
+    50%{
+        transform: translateY(-40px);
+    }
+}

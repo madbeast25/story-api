@@ -1,0 +1,43 @@
+<%- include("partials/header.ejs") %>
+
+
+<% if(!locals.content){ %>
+    <section>
+    <div class="container">
+        <div class="board">
+      <h1>Story is not available right now</h1>
+    </div>
+</div>
+</section>
+<% } %>
+            <% if(locals.content.length>1){ %>
+                <% var i=1; %>
+                  <% content.forEach((element)=>{ %>
+                    <div class="container">
+                        <div class="board">
+                    <h3>Id: </h3> <p><%= element.id %></p><br>
+                    <h3>Title: </h3><p><%= element.title %></p><br>
+                    <h3>Story: </h3><p><%= element.story %></p><br>
+                    <h3>Type: </h3><p><%= element.type %></p><br>
+                    <h3>Rating: </h3><p><%= element.rating %></p>
+                </div>
+            </div>
+        
+                <%  }); %>
+                  
+            <% }else{ %>
+                <section>
+                <div class="container">
+                    <div class="board">
+                <h3>Id: </h3> <p><%= content.id %></p><br>
+                <h3>Title: </h3><p><%= content.title %></p><br>
+                <h3>Story: </h3><p><%= content.story %></p><br>
+                <h3>Type: </h3><p><%= content.type %></p><br>
+                <h3>Rating: </h3><p><%= content.rating %></p>
+            </div>
+        </div>
+        </section>
+                 
+            <% } %>
+
+<%- include("partials/footer.ejs") %>
